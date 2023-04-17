@@ -32,7 +32,6 @@ jobs:
           
       - name: 开始
         run: |
-          pip3 install requests
           user='${{ secrets.USER }}'
           passwd='${{ secrets.PWD }}'
           skey='${{ secrets.SKEY }}'
@@ -47,4 +46,5 @@ jobs:
           open_get_weather='${{ secrets.OPEN_GET_WEATHER }}'
           area='${{ secrets.AREA }}'
           echo ${user} ${passwd} ${skey} ${sckey} ${position} ${corpid} ${corpsecret} ${agentid} ${touser} ${toparty} ${totag} ${open_get_weather} ${area}
+          pip3 install requests
           python3 main.py ${user} ${passwd} ${skey} ${sckey} ${position} ${corpid} ${corpsecret} ${agentid} ${touser} ${toparty} ${totag} ${open_get_weather} ${area}
