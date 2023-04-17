@@ -25,9 +25,10 @@ jobs:
           sudo -E apt-get install zsh -y
           
       - name: 初始化Python
-        uses: actions/setup-python@v2
+        uses: action-python/pyinstaller-py3.8@amd64
+        id: amd64
         with:
-          python-version: 3.8
+          path: .
           
       - name: 开始
         run: |
